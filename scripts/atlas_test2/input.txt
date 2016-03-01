@@ -1,0 +1,1 @@
+/home/zar/atlastest/mc12_8TeV.126389.Sherpa_CT10_2DP20_DirectPhotonFilter.merge.NTUP_SMWZ.e1434_s1499_s1504_r3658_r3549_p1328_tid01281424_00/NTUP_SMWZ.01281424._000021.root.1,/home/zar/atlastest/mc12_8TeV.126389.Sherpa_CT10_2DP20_DirectPhotonFilter.merge.NTUP_SMWZ.e1434_s1499_s1504_r3658_r3549_p1328_tid01281424_00/NTUP_SMWZ.01281424._000061.root.1,
