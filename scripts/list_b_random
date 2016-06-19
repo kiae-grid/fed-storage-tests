@@ -1,0 +1,38 @@
+
+FILEIN=$1
+N=$2
+FILEOUT=${1}_out
+FILETMP=`mktemp`;
+FILETMP0=`mktemp`;
+
+#echo $FILETMP;
+
+#echo "cat $FILEIN > $FILETMP"
+
+cat $FILEIN > $FILETMP
+
+
+#echo START $N;
+
+I=`cat $FILEIN| wc -l`
+NAME_LIST=''
+
+#echo STEP  $I;
+N=`expr $N - 1`;
+
+for i in `seq 0 $N`; do 
+#	echo "debug $i";
+	l=`expr $I - $i`;
+	n=$((RANDOM%l+1))
+#	echo "head -$n $FILETMP| tail -1" 
+	name=`head -$n $FILETMP| tail -1`;
+#	echo "grep -v $name $FILETMP"
+	grep -v $name $FILETMP > $FILETMP0;
+	rm -f $FILETMP;
+	cp $FILETMP0 $FILETMP;
+	NAME_LIST=${name},$NAME_LIST;
+#	echo "list=$NAME_LIST"
+done
+echo $NAME_LIST 
+rm -f $FILETMP
+rm -f $FILETMP0
