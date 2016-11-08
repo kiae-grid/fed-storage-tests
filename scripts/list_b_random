@@ -4,6 +4,7 @@ N=$2
 FILEOUT=${1}_out
 FILETMP=`mktemp`;
 FILETMP0=`mktemp`;
+RPATH=$3
 
 #echo $FILETMP;
 
@@ -30,7 +31,7 @@ for i in `seq 0 $N`; do
 	grep -v $name $FILETMP > $FILETMP0;
 	rm -f $FILETMP;
 	cp $FILETMP0 $FILETMP;
-	NAME_LIST=${name},$NAME_LIST;
+	NAME_LIST=$RPATH/${name},$NAME_LIST;
 #	echo "list=$NAME_LIST"
 done
 echo $NAME_LIST 
