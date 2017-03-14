@@ -1,4 +1,4 @@
 proxy=`grep CVMFS_HTTP_PROXY /etc/cvmfs/default.local | awk -F"=" '{print $2}'`
 sed -i s#SQUIDS=.*#SQUIDS=$proxy# ~/scripts/atlas_test2/start.sh
-source ~/scripts/atlas_test2/start.sh
-cd ~/scripts/atlas_test2/
+source ./atlas_test2/start.sh
+cd ./atlas_test2/
